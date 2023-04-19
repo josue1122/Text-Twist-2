@@ -37,7 +37,7 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("SF Pro Display", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(82, 289)
+        Me.Label1.Location = New System.Drawing.Point(82, 308)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(1050, 42)
         Me.Label1.TabIndex = 1
@@ -50,9 +50,9 @@ Partial Class Form1
         Me.btnTimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnTimed.Font = New System.Drawing.Font("SF Pro Display", 26.25!, System.Drawing.FontStyle.Bold)
         Me.btnTimed.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnTimed.Location = New System.Drawing.Point(235, 446)
+        Me.btnTimed.Location = New System.Drawing.Point(412, 434)
         Me.btnTimed.Name = "btnTimed"
-        Me.btnTimed.Size = New System.Drawing.Size(276, 90)
+        Me.btnTimed.Size = New System.Drawing.Size(376, 55)
         Me.btnTimed.TabIndex = 2
         Me.btnTimed.Text = "TIMED"
         Me.btnTimed.UseVisualStyleBackColor = False
@@ -63,28 +63,30 @@ Partial Class Form1
         Me.btnUntimed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnUntimed.Font = New System.Drawing.Font("SF Pro Display", 26.25!, System.Drawing.FontStyle.Bold)
         Me.btnUntimed.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUntimed.Location = New System.Drawing.Point(673, 446)
+        Me.btnUntimed.Location = New System.Drawing.Point(412, 495)
         Me.btnUntimed.Name = "btnUntimed"
-        Me.btnUntimed.Size = New System.Drawing.Size(276, 90)
+        Me.btnUntimed.Size = New System.Drawing.Size(376, 60)
         Me.btnUntimed.TabIndex = 3
         Me.btnUntimed.Text = "UNTIMED"
         Me.btnUntimed.UseVisualStyleBackColor = False
         '
         'btnSound
         '
-        Me.btnSound.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnSound.Image = CType(resources.GetObject("btnSound.Image"), System.Drawing.Image)
-        Me.btnSound.Location = New System.Drawing.Point(547, 592)
+        Me.btnSound.BackColor = System.Drawing.Color.IndianRed
+        Me.btnSound.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.25!)
+        Me.btnSound.ForeColor = System.Drawing.Color.White
+        Me.btnSound.Location = New System.Drawing.Point(1137, 677)
         Me.btnSound.Name = "btnSound"
-        Me.btnSound.Size = New System.Drawing.Size(86, 87)
-        Me.btnSound.TabIndex = 4
+        Me.btnSound.Size = New System.Drawing.Size(67, 53)
+        Me.btnSound.TabIndex = 5
+        Me.btnSound.Text = "🔊"
         Me.btnSound.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.TextTwist2.My.Resources.Resources._81Y2lHoTFqL_transformed_transformed
         Me.PictureBox1.Image = Global.TextTwist2.My.Resources.Resources._81Y2lHoTFqL_transformed_transformed
-        Me.PictureBox1.Location = New System.Drawing.Point(89, -66)
+        Me.PictureBox1.Location = New System.Drawing.Point(89, -51)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(774, 340)
         Me.PictureBox1.TabIndex = 0

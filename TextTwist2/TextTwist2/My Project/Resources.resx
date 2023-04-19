@@ -127,4 +127,7 @@
   <data name="1486485571-198high-loud-music-on-sound-speaker-volume_81180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1486485571-198high-loud-music-on-sound-speaker-volume_81180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MainMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainMenu.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

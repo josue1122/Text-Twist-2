@@ -12,3 +12,7 @@ C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\
 C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.xml
 C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.pdb
 C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.frmJuego.resources
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.dll
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.pdb
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\bin\Debug\ClasesJuego.xml
+C:\Users\Cristian\Desktop\Programación\ProyectoFinalSolo\TextTwist2\TextTwist2\obj\Debug\TextTwist2.vbproj.CopyComplete
