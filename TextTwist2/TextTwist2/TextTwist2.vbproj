@@ -150,5 +150,8 @@
   <ItemGroup>
     <None Include="Resources\MainMenu.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -139,5 +139,19 @@ Public Class frmJuego
             xInicial += anchoBoton + espacioEntreBotones
         Next
     End Sub
+    Private Sub MostrarDefinicion(x As Integer, y As Integer)
+        Dim btnDef As New Button
+        btnDef.Name = "btnDef"
+        btnDef.FlatStyle = FlatStyle.Flat
+        btnDef.BackgroundImageLayout = ImageLayout.Zoom
+        btnDef.BackgroundImage = New Bitmap(My.Resources.libro2, 20, 15)
+        btnDef.Location = New Point(x, y)
+        btnDef.Size = New Size(30, 20)
+        AddHandler btnDef.Click, AddressOf btnDef_click
+        Controls.Add(btnDef)
+    End Sub
+    Private Sub btnDef_click(sender As Object, a As EventArgs)
+        MessageBox.Show("Def")
+    End Sub
 
 End Class
