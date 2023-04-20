@@ -46,7 +46,7 @@ Partial Class frmJuego
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(552, 403)
+        Me.Button1.Location = New System.Drawing.Point(434, 400)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(155, 44)
         Me.Button1.TabIndex = 3
@@ -59,7 +59,7 @@ Partial Class frmJuego
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(728, 403)
+        Me.Button2.Location = New System.Drawing.Point(610, 400)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(156, 44)
         Me.Button2.TabIndex = 4
@@ -72,7 +72,7 @@ Partial Class frmJuego
         Me.btnTwist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnTwist.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTwist.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnTwist.Location = New System.Drawing.Point(902, 403)
+        Me.btnTwist.Location = New System.Drawing.Point(784, 400)
         Me.btnTwist.Name = "btnTwist"
         Me.btnTwist.Size = New System.Drawing.Size(155, 44)
         Me.btnTwist.TabIndex = 5
@@ -86,7 +86,7 @@ Partial Class frmJuego
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("SF Pro Display", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(552, 13)
+        Me.Label1.Location = New System.Drawing.Point(434, 10)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 26)
         Me.Label1.TabIndex = 7
@@ -99,7 +99,7 @@ Partial Class frmJuego
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Font = New System.Drawing.Font("SF Pro Display", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(922, 13)
+        Me.Label2.Location = New System.Drawing.Point(804, 10)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(62, 26)
         Me.Label2.TabIndex = 8
@@ -112,7 +112,7 @@ Partial Class frmJuego
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("SF Pro Display", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(761, 13)
+        Me.Label3.Location = New System.Drawing.Point(643, 10)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 26)
         Me.Label3.TabIndex = 9
@@ -125,7 +125,7 @@ Partial Class frmJuego
         Me.lblPuntos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblPuntos.Font = New System.Drawing.Font("SF Pro Display", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblPuntos.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblPuntos.Location = New System.Drawing.Point(640, 13)
+        Me.lblPuntos.Location = New System.Drawing.Point(522, 10)
         Me.lblPuntos.Name = "lblPuntos"
         Me.lblPuntos.Size = New System.Drawing.Size(64, 26)
         Me.lblPuntos.TabIndex = 10
@@ -138,7 +138,7 @@ Partial Class frmJuego
         Me.lblRonda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblRonda.Font = New System.Drawing.Font("SF Pro Display", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblRonda.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblRonda.Location = New System.Drawing.Point(854, 13)
+        Me.lblRonda.Location = New System.Drawing.Point(736, 10)
         Me.lblRonda.Name = "lblRonda"
         Me.lblRonda.Size = New System.Drawing.Size(21, 26)
         Me.lblRonda.TabIndex = 11
@@ -154,7 +154,7 @@ Partial Class frmJuego
         Me.lblHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblHora.Font = New System.Drawing.Font("SF Pro Display", 15.0!, System.Drawing.FontStyle.Bold)
         Me.lblHora.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblHora.Location = New System.Drawing.Point(988, 13)
+        Me.lblHora.Location = New System.Drawing.Point(870, 10)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(69, 26)
         Me.lblHora.TabIndex = 12
@@ -166,7 +166,7 @@ Partial Class frmJuego
         Me.btnSonido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnSonido.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSonido.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnSonido.Location = New System.Drawing.Point(1079, 10)
+        Me.btnSonido.Location = New System.Drawing.Point(961, 7)
         Me.btnSonido.Name = "btnSonido"
         Me.btnSonido.Size = New System.Drawing.Size(68, 30)
         Me.btnSonido.TabIndex = 13
@@ -179,7 +179,7 @@ Partial Class frmJuego
         Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button6.Font = New System.Drawing.Font("Segoe UI Emoji", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.Window
-        Me.Button6.Location = New System.Drawing.Point(1153, 10)
+        Me.Button6.Location = New System.Drawing.Point(1035, 7)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(76, 30)
         Me.Button6.TabIndex = 14
@@ -192,11 +192,10 @@ Partial Class frmJuego
         Me.lblTextoBotones.BackColor = System.Drawing.SystemColors.Control
         Me.lblTextoBotones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblTextoBotones.Font = New System.Drawing.Font("SF Pro Display", 26.25!, System.Drawing.FontStyle.Bold)
-        Me.lblTextoBotones.Location = New System.Drawing.Point(761, 150)
+        Me.lblTextoBotones.Location = New System.Drawing.Point(641, 184)
         Me.lblTextoBotones.Name = "lblTextoBotones"
-        Me.lblTextoBotones.Size = New System.Drawing.Size(298, 44)
+        Me.lblTextoBotones.Size = New System.Drawing.Size(2, 44)
         Me.lblTextoBotones.TabIndex = 15
-        Me.lblTextoBotones.Text = "TEXTO BOTONES"
         '
         'Button4
         '
@@ -204,7 +203,7 @@ Partial Class frmJuego
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button4.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button4.Location = New System.Drawing.Point(1074, 403)
+        Me.Button4.Location = New System.Drawing.Point(956, 400)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(155, 44)
         Me.Button4.TabIndex = 16
@@ -216,7 +215,7 @@ Partial Class frmJuego
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1241, 836)
+        Me.ClientSize = New System.Drawing.Size(1118, 741)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.lblTextoBotones)
         Me.Controls.Add(Me.Button6)

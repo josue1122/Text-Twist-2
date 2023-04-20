@@ -1,8 +1,13 @@
 ﻿Public Class Palabra
     Implements IEquatable(Of Palabra)
     Public Property Texto As String
+    Public Property Significado As String
     Public Sub New(texto As String)
         Me.Texto = texto
+    End Sub
+    Public Sub New(texto As String, significado As String)
+        Me.New(texto)
+        Me.Significado = significado
     End Sub
     Public Overrides Function Equals(obj As Object) As Boolean
         Return Equals(TryCast(obj, Palabra))

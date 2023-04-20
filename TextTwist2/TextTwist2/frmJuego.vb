@@ -1,18 +1,6 @@
 ﻿Imports ClasesJuego
 
 Public Class frmJuego
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnTwist.Click
-
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub lblPuntos_Click(sender As Object, e As EventArgs) Handles lblPuntos.Click
-
-    End Sub
-
     Private tiempoRestante As Integer = 150 'Dos minutos en segundos
 
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -27,8 +15,20 @@ Public Class frmJuego
         End If
 
         GenerarBotones(Nivel1(1).texto)
-
-
+        GenerarGapsBlanco(Nivel1(1).texto)
+    End Sub
+    Dim btnsGlobales As New List(Of Button)
+    Private Sub Btn_Click(sender As Object, e As EventArgs)
+        ' Aquí va el código que se ejecutará al hacer click en el botón
+        ' Para acceder al botón que ha sido clickeado, podemos utilizar la variable "sender"
+        Dim btnCaracteres As Button = DirectCast(sender, Button)
+        'MessageBox.Show("Has clickeado el botón " & btnCaracteres.Text)
+        lblTextoBotones.Text += sender.text
+        ' Deshabilitar el botón para que no se pueda pulsar de nuevo
+        btnCaracteres.Enabled = False
+        btnsGlobales.Add(btnCaracteres)
+    End Sub
+    Private Sub GenerarGapsBlanco(palabra As String)
         Dim x As Integer = 10
         Dim y As Integer = 10
         Dim labelWidth As Integer = 30
@@ -56,8 +56,6 @@ Public Class frmJuego
             x = 10
             y += labelHeight + 5
         Next
-
-
     End Sub
     Private Sub GenerarBotones(palabra As String)
         Dim anchoBoton As Integer = 50
@@ -66,8 +64,11 @@ Public Class frmJuego
         Dim yInicial As Integer = 300
         Dim letras As List(Of Char) = palabra.ToList() ' Convertimos la palabra en una lista de caracteres
         letras = letras.OrderBy(Function() Guid.NewGuid()).ToList() ' Barajamos los caracteres
+        Dim contadorLetras As Integer = 0
         For Each letra As Char In letras
             Dim boton As New Button()
+            contadorLetras += 1
+            boton.Name = "btnCaracteres" & contadorLetras
             boton.Width = anchoBoton
             boton.Height = anchoBoton
             boton.BackColor = Color.White
@@ -75,6 +76,7 @@ Public Class frmJuego
             boton.Text = letra.ToString.ToUpper
             Me.Controls.Add(boton)
             xInicial += anchoBoton + espacioEntreBotones
+            AddHandler boton.Click, AddressOf Btn_Click
         Next
     End Sub
 
@@ -86,6 +88,11 @@ Public Class frmJuego
                 Me.lblHora.Text = String.Format("{0:m\:ss}", TimeSpan.FromSeconds(tiempoRestante))
             Else
                 Timer1.Stop()
+                Dim result As DialogResult = MessageBox.Show("Tiempo Finalizado", "¡Juego Finalizado!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If result = DialogResult.OK Then
+                    Form1.Show()
+                    Me.Hide()
+                End If
                 'Aquí es donde puedes hacer cualquier cosa que necesites hacer cuando el tiempo se agote
             End If
         Else
@@ -104,8 +111,33 @@ Public Class frmJuego
         Form1.Show()
         Me.Close()
     End Sub
-
-    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        For Each btn As Button In btnsGlobales
+            btn.Enabled = True
+        Next
+        lblTextoBotones.Text = ""
     End Sub
+    Private Sub Shuffle(Of T)(list As IList(Of T))
+        Dim rng As New Random()
+        Dim n As Integer = list.Count
+        While n > 1
+            n -= 1
+            Dim k As Integer = rng.Next(n + 1)
+            Dim value As T = list(k)
+            list(k) = list(n)
+            list(n) = value
+        End While
+    End Sub
+    Private Sub btnTwist_Click(sender As Object, e As EventArgs) Handles btnTwist.Click
+        Shuffle(btnsGlobales)
+        Dim anchoBoton As Integer = 50
+        Dim espacioEntreBotones As Integer = 20
+        Dim xInicial As Integer = Me.Width - ((anchoBoton + espacioEntreBotones) * btnsGlobales.ToArray.Length - espacioEntreBotones) - 150
+        Dim yInicial As Integer = 300
+        For Each btn As Button In btnsGlobales
+            btn.Location = New Point(xInicial, yInicial)
+            xInicial += anchoBoton + espacioEntreBotones
+        Next
+    End Sub
+
 End Class
