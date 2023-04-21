@@ -2,8 +2,9 @@
 
 Public Class frmJuego
     Private tiempoRestante As Integer = 150 'Dos minutos en segundos
-
+    Private listaGaps As New List(Of Label)
     Private Sub frmJuego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         btnSonido.Text = "🔊"
         Conectar()
         If tiempo = True Then
@@ -16,6 +17,7 @@ Public Class frmJuego
 
         GenerarBotones(Nivel1(1).texto)
         GenerarGapsBlanco(Nivel1(1).texto)
+
     End Sub
     Dim btnsGlobales As New List(Of Button)
     Private Sub Btn_Click(sender As Object, e As EventArgs)
@@ -33,19 +35,20 @@ Public Class frmJuego
         Dim y As Integer = 10
         Dim labelWidth As Integer = 30
         Dim labelHeight As Integer = 20
-        Dim palabraGeneradora As Palabra
-
+        Dim palabraGeneradora As pal
         Dim anchoTotal As Integer = 0
         Dim espacioEntreLabels As Integer = 10
 
         For Each palabraGeneradora In Nivel1
             For Each letra As Char In palabraGeneradora.Texto
-                Dim label As New Label()
-                label.Text = String.Empty
-                label.BackColor = Color.White
-                label.Size = New Size(labelWidth, labelHeight)
-                label.Location = New Point(x, y)
-                Me.Controls.Add(label)
+                Dim lblGaps As New Label()
+                lblGaps.Text = String.Empty
+                lblGaps.BackColor = Color.White
+                lblGaps.Size = New Size(labelWidth, labelHeight)
+                lblGaps.Location = New Point(x, y)
+                lblGaps.Name = "lblGaps"
+                Me.Controls.Add(lblGaps)
+                listaGaps.Add(lblGaps)
                 x += labelWidth + 5
                 If x > 10 + labelWidth * 10 + espacioEntreLabels * 9 Then
                     'Reiniciar la posición horizontal y agregar espacio entre columnas
@@ -57,6 +60,7 @@ Public Class frmJuego
             y += labelHeight + 5
         Next
     End Sub
+    Private botones As List(Of Button) = New List(Of Button)()
     Private Sub GenerarBotones(palabra As String)
         Dim anchoBoton As Integer = 50
         Dim espacioEntreBotones As Integer = 20
@@ -75,9 +79,11 @@ Public Class frmJuego
             boton.Location = New Point(xInicial, yInicial)
             boton.Text = letra.ToString.ToUpper
             Me.Controls.Add(boton)
+            botones.Add(boton)
             xInicial += anchoBoton + espacioEntreBotones
             AddHandler boton.Click, AddressOf Btn_Click
         Next
+
     End Sub
 
 
@@ -129,14 +135,12 @@ Public Class frmJuego
         End While
     End Sub
     Private Sub btnTwist_Click(sender As Object, e As EventArgs) Handles btnTwist.Click
-        Shuffle(btnsGlobales)
-        Dim anchoBoton As Integer = 50
-        Dim espacioEntreBotones As Integer = 20
-        Dim xInicial As Integer = Me.Width - ((anchoBoton + espacioEntreBotones) * btnsGlobales.ToArray.Length - espacioEntreBotones) - 150
-        Dim yInicial As Integer = 300
-        For Each btn As Button In btnsGlobales
-            btn.Location = New Point(xInicial, yInicial)
-            xInicial += anchoBoton + espacioEntreBotones
+        botones = botones.OrderBy(Function() Guid.NewGuid()).ToList()
+        For i As Integer = 0 To botones.Count - 1
+            Dim boton As Button = botones(i)
+            Dim xInicial As Integer = Me.Width - ((boton.Width + 20) * botones.Count - 20) - 150
+            Dim yInicial As Integer = 300
+            boton.Location = New Point(xInicial + (boton.Width + 20) * i, yInicial)
         Next
     End Sub
     Private Sub MostrarDefinicion(x As Integer, y As Integer)
@@ -153,5 +157,14 @@ Public Class frmJuego
     Private Sub btnDef_click(sender As Object, a As EventArgs)
         MessageBox.Show("Def")
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
+    End Sub
+
+    Private Sub lblTextoBotones_Click(sender As Object, e As EventArgs) Handles lblTextoBotones.Click
+
+    End Sub
+
+
 
 End Class
